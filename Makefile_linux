@@ -1,0 +1,27 @@
+SRC = ft_read.asm ft_strdup.asm ft_strlen.asm ft_strcmp.asm ft_write.asm ft_strcpy.asm
+BONUS = $(wildcard *_bonus.asm)
+OBJ = $(SRC:%.asm=%.o)
+BONUS_OBJ = $(BONUS:%.asm=%.o)
+NAME = libasm.a
+
+all: $(NAME)
+
+$(NAME): $(OBJ) main.c
+	gcc -c main.c
+	gcc -no-pie main.o $(OBJ)
+
+bonus: $(BONUS_OBJ) main_bonus.c
+	gcc -c main_bonus.c
+	gcc -no-pie main_bonus.o $(BONUS_OBJ)
+
+%.o: %.asm
+	nasm -f elf64 $^
+
+clean:
+	rm -rf $(OBJ) $(BONUS_OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean
+	make
