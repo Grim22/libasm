@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: grim <grim@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/04/03 16:33:18 by grim              #+#    #+#             */
+/*   Updated: 2020/04/03 16:33:36 by grim             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -6,12 +18,12 @@
 
 #define BUF_SIZE 30
 
-int ft_strlen(char *str);
-int ft_strcmp(char *a, char *b);
-char *ft_strdup(char const *s1);
-ssize_t ft_write(int fildes, const void *buf, size_t nbyte);
-ssize_t ft_read(int fd, void *buf, size_t count);
-char *ft_strcpy(char *dest, const char *src);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *a, char *b);
+char	*ft_strdup(char const *s1);
+ssize_t	ft_write(int fildes, const void *buf, size_t nbyte);
+ssize_t	ft_read(int fd, void *buf, size_t count);
+char	*ft_strcpy(char *dest, const char *src);
 
 #define PRINT_FT_STRLEN(x) printf("str: [%s] len: [%ld] --> ft_strlen = [%d]\n", x, strlen(x), ft_strlen(x))
 #define PRINT_FT_STRCMP(x, y) printf("s1: [%s] s2: [%s] strcmp: [%d]--> ft_strcmp = [%d]\n", x, y, strcmp(x, y), ft_strcmp(x,y))

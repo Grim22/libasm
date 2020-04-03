@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: grim <grim@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/04/03 16:29:04 by grim              #+#    #+#             */
+/*   Updated: 2020/04/03 16:32:36 by grim             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "stdio.h"
 #include "string.h"
 #include "stdlib.h"
@@ -11,28 +23,27 @@ typedef struct	s_list
 }				t_list;
 
 
-void print_str_list(t_list *lst)
+void	print_str_list(t_list *lst)
 {
-				char *str;
-				int i;
+	char *str;
+	int i;
 
-				i = 0;
-				while(lst)
-				{
-								str = lst->data;
-								printf("elem #%d: [%s]\n", i, str);
-								lst = lst->next;
-								i++;
-				}
+	i = 0;
+	while(lst)
+	{
+		str = lst->data;
+		printf("elem #%d: [%s]\n", i, str);
+		lst = lst->next;
+		i++;
+	}
 }
 
 void	ft_list_push_front(t_list **begin_list, void *data);
-int ft_atoi_base(char *str, char *base);
+int		ft_atoi_base(char *str, char *base);
 int		ft_list_size(t_list *begin_list);
 
-int main()
+int		main()
 {
-
 printf("test ft_atoi ------------------------------------------\n");
 print_atoi("101", "01");
 print_atoi("101", "0123456789");

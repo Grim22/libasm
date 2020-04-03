@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: grim <grim@student.42.fr>                  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/04/03 16:45:32 by grim              #+#    #+#              #
+#    Updated: 2020/04/03 16:45:34 by grim             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRC = ft_read.asm ft_strdup.asm ft_strlen.asm ft_strcmp.asm ft_write.asm ft_strcpy.asm
 BONUS = $(wildcard *_bonus.asm)
 OBJ = $(SRC:%.asm=%.o)
