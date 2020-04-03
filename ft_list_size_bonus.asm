@@ -1,8 +1,8 @@
 					section .text
-					global ft_list_size
+					global _ft_list_size
 
 ;rdi = t_list *lst
-ft_list_size:
+_ft_list_size:
 							xor rax, rax
 							jmp while
 

@@ -32,7 +32,7 @@ int		ft_list_size(t_list *begin_list);
 
 int main()
 {
-/*
+
 printf("test ft_atoi ------------------------------------------\n");
 print_atoi("101", "01");
 print_atoi("101", "0123456789");
@@ -49,16 +49,16 @@ print_atoi("101", "xyz+");
 print_atoi("101", "-xyz");
 print_atoi("101", "x yz");
 print_atoi("101", "x");
-print_atoi("101", "");*/
+print_atoi("101", "");
 printf("test ft_list_push_front ------------------------------------------\n");
 
 t_list *lst;
 lst = malloc(sizeof(*lst));
 lst->data = strdup("Hello");
 lst->next = NULL;
-//ft_list_push_front(&lst, strdup("basile"));
-//ft_list_push_front(&lst, strdup("42"));
-//ft_list_push_front(&lst, strdup("confinement"));
+ft_list_push_front(&lst, strdup("basile"));
+ft_list_push_front(&lst, strdup("42"));
+ft_list_push_front(&lst, strdup("confinement"));
 print_str_list(lst);
 printf("test ft_list_size ------------------------------------------\n");
 int size;

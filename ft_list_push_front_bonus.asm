@@ -1,14 +1,14 @@
 				section .text
-				global ft_list_push_front
-				extern malloc
+				global _ft_list_push_front
+				extern _malloc
 
 ;rdi: t_list **begin_list
 ;rsi: void *data
-ft_list_push_front:
+_ft_list_push_front:
 										push rdi
 										push rsi
 										mov rdi, 16
-										call malloc; rax contient l'adresse du premier element de la structure
+										call _malloc; rax contient l'adresse du premier element de la structure
 										cmp rax, 0
 										je return
 										pop rsi

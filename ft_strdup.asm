@@ -1,12 +1,12 @@
             section .text
-            global ft_strdup
-            extern malloc
+            global _ft_strdup
+            extern _malloc
 
 ;rax contient ladresse de lespace alloue
 ;rdi contient la string a copier
 ;rcx contient la len
 
-ft_strdup:
+_ft_strdup:
             xor rcx, rcx
             jmp get_len            
 
@@ -18,11 +18,13 @@ get_len:
             jnz increment
             push rdi ;save rdi
             mov rdi, rcx ;put len into rdi (arg of malloc) 
-						push rcx ; save rcx
-            call malloc
-						cmp rax, 0
-						je return ; if malloc returns NULL, return 0
-						pop rcx ; restore rcx
+			push rcx ; save rcx
+			push rdx; only to move rsp up for the stack to be aligned
+            call _malloc
+			cmp rax, 0
+			je return ; if malloc returns NULL, return 0
+			pop rdx
+			pop rcx ; restore rcx
             pop rdi ; restore rdi
             xor rdx, rdx
             jmp while
@@ -36,5 +38,5 @@ while:
             jbe assign
 
 return:            
-						ret
+			ret
             

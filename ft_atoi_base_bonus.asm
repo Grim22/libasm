@@ -1,5 +1,5 @@
 			section .text
-			global ft_atoi_base
+			global _ft_atoi_base
 
 ; rsi contient la base
 ; rdi le nombre a convertir
@@ -10,7 +10,7 @@
 ; rdx et rax sont reserves pour le resultat de la multuplication
 ; ecx = len_base
 
-ft_atoi_base:
+_ft_atoi_base:
 							push rbx; save rbx
 							xor r8, r8; i = 0
 							xor r9, r9; ret = 0
