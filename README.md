@@ -28,7 +28,7 @@
 <p>- for a given ISA, defines &quot;mnemonic codes&quot; (ex: MOV) to refer to machine code instructions</p>
 <p>- Advantage: strong correspondence with machine language -&gt; much faster/simpler than compiling</p>
 <p>- Disadvantage: not &quot;portable&quot;: 1 ASM language = 1 ISA.&nbsp;</p>
-<p>- The even can be different ASM language for a given ISA:<br>x86 has two main languages/syntax:<br><strong>Intel syntax</strong> (mostly used on Windows) and <strong>AT&amp;T syntax</strong> (mostly used on Unix)</p>
+<p>- There even can be different ASM languages for a given ISA:<br>x86 has two main languages/syntax:<br><strong>Intel syntax</strong> (mostly used on Windows) and <strong>AT&amp;T syntax</strong> (mostly used on Unix)</p>
 <p><br></p>
 <h2>Links</h2>
 <p>On ASM:</p>
